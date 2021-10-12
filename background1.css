@@ -1,0 +1,142 @@
+html,
+body,
+div,
+span,
+table,
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "Roboto", Helvetica, Calibri;
+    font-size: 100%;
+    line-height: 1em;
+    vertical-align: baseline;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    background-color: #0085a1;
+    width: 85%;
+    height: 100vh;
+    margin: auto;
+}
+
+.canvas-animation {
+    display: block;
+    width: 18%;
+    overflow: hidden;
+    height: 100%;
+    margin-left: 30%;
+    /* display: none; */
+    position: absolute;
+    z-index: 0;
+}
+
+#canvas {
+    transform: rotateY( 180deg) translate(44%);
+}
+
+.palm-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+}
+
+.palm-path {
+    fill: none;
+    /* fill: #fff; */
+    stroke: #fff;
+    stroke-width: 18px;
+    stroke-dasharray: 5000;
+    stroke-dashoffset: 5000;
+    animation: offset 1s forwards;
+    animation-play-state: paused;
+}
+
+#palm-1 {
+    width: 15%;
+    margin-left: 40%;
+    margin-top: 10rem;
+    transform: rotate( -60deg);
+    transform-origin: bottom;
+    animation: rotation 1s forwards;
+    animation-play-state: paused;
+}
+
+@keyframes offset {
+    20% {
+        stroke-dashoffset: 0;
+    }
+    60% {
+        stroke-dashoffset: 3000;
+        stroke-dasharray: 4000;
+    }
+    100% {
+        stroke-dashoffset: 5000;
+        stroke-dasharray: 5000;
+    }
+}
+
+@keyframes rotation {
+    100% {
+        transform: rotate(60deg);
+    }
+}
+
+.cls-1 {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    stroke-width: 10px;
+    stroke-dashoffset: 690;
+    stroke-dasharray: 690;
+    animation: semi-circle 2s forwards;
+    animation-play-state: paused;
+}
+
+.cls-2 {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    stroke-width: 10px;
+    stroke-dashoffset: 690;
+    stroke-dasharray: 690;
+    animation: semi-circle 2s forwards;
+    animation-play-state: paused;
+}
+
+@keyframes semi-circle {
+    50% {
+        stroke-dashoffset: 1380;
+    }
+    100% {
+        stroke-dashoffset: 690;
+    }
+}
+
+#Layer_1 {
+    margin-top: 15rem;
+    margin-left: 38%;
+    width: 25%;
+    padding: 2rem;
+}
+
+.cls-2 {
+    transform: rotate( 224deg) translate(-717px) rotate( -45deg);
+}
+
+.circle-animation {
+    width: 100%;
+    display: none;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
